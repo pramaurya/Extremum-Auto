@@ -1,13 +1,18 @@
-# Extremum-Auto
+# **Extremum-Auto**
 Enters a list of promo codes to pass.extremum.gg
 This works only for Google Chrome
 
 
 
-Usage guide:
+## Usage guide:
+
+#### **Step 1:**
+
 
 If your steamguard (2fa for steam) is turned off, download `ExtremumAuto`
 If your steamguard is turned on, download `ExtremumAuto2fa`
+
+#### **Step 2:**
 
 After downloading the respective file, extract it to a folder and run the `RUN.bat` file. 
 
