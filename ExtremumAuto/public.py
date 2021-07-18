@@ -80,13 +80,22 @@ for x in range(len(list)):
     activatecode.click()
     promocode.send_keys(Keys.LEFT_CONTROL + 'a')
     errorreason = "Activation is blocked. Too many requests"
+    errorreason2 = "Code not found"
+    errorreason3 = "Code used"
+    errorreason4 = 'Code sent for processing'
+
     print (list[x])
     time.sleep(2)
     if driver.find_element(By.XPATH, '/html/body/div[1]/div/div/aside/div/div[1]/section[1]/div[1]/div/div/form/div[2]/div/span').is_displayed() and errorreason in driver.page_source:
         print (list[x] + ' was blocked')
         time.sleep(180)
         x = x - 1
+    elif driver.find_element(By.XPATH, '/html/body/div[1]/div/div/aside/div/div[1]/section[1]/div[1]/div/div/form/div[2]/div/span').is_displayed() and errorreason2 in driver.page_source:
+        print (list[x] + ' was not found')
+    elif driver.find_element(By.XPATH, '/html/body/div[1]/div/div/aside/div/div[1]/section[1]/div[1]/div/div/form/div[2]/div/span').is_displayed() and errorreason3 in driver.page_source:
+        print (list[x] + ' was used')
     else:
+        print (list[x] + ' was successful')
         promocode.click()
         promocode.send_keys(Keys.LEFT_CONTROL + 'a')
         time.sleep(5)
