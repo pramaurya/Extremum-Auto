@@ -12,7 +12,7 @@ import time
 
 options = Options()
 
-options.binary_location = "C:\Program Files (x86)\Google\Chrome Beta\Application\chrome.exe"
+options.binary_location = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 options.add_experimental_option("excludeSwitches", ['enable-logging'])
 
 
